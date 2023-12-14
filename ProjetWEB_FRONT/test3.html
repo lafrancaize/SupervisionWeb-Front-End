@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Meteo.css">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
+        .search-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            box-sizing: border-box;
+        }
+
+        .search-container button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 10;
+            padding: 0;
+            text-align: left;
+            color: green;
+        }
+
+        .nav-list li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-list a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+        .map {
+            text-align: center;
+            margin-top: 60px; /* Ajustez la marge pour l'espace entre la barre de recherche et la carte */
+        }
+
+        .listCities {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <header>
+        <img src="votre_logo.png" alt="Logo" class="logo" width="100">
+        TITRE METEO
+    </header>
+</div>
+
+<div class="search-container">
+    <form action="/action_page.php">
+        <input type="text" placeholder="Rechercher une Ville" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+
+
+
+<div class="map">
+    <ul class="nav-list">
+        <li><a href="#">Aujourd'hui</a></li>
+        <li><a href="#">Demain</a></li>
+        <li><a href="#">Sur 7 jours</a></li>
+        <li><a href="#">Sur 15 jours</a></li>
+    </ul>
+    <iframe width="90%" height="500" src="https://www.openstreetmap.org/export/embed.html?bbox=-14.128417968750002%2C40.9964840143779%2C13.073730468750002%2C51.39920565355378&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/>
+</div>
+
+<div class="listCities">
+    <table>
+        <thead>
+        <tr>
+            <th>Ville</th>
+            <th>Météo</th>
+            <th>Température</th>
+            <!-- Ajoutez d'autres colonnes ici -->
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Ville 1</td>
+            <td>Ensoleillé</td>
+            <td>25°C</td>
+            <!-- Ajoutez d'autres données ici -->
+        </tr>
+        <tr>
+            <td>Ville 2</td>
+            <td>Nuageux</td>
+            <td>20°C</td>
+            <!-- Ajoutez d'autres données ici -->
+        </tr>
+        <tr>
+            <td>Ville 3</td>
+            <td>Pluie</td>
+            <td>15°C</td>
+            <!-- Ajoutez d'autres données ici -->
+        </tr>
+        <!-- Ajoutez d'autres villes avec leurs données ici -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

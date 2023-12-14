@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+body {
+    margin:0;
+}
+
+header {
+    width:100%;
+}
+.recherche-container{
+    width:100%;
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    background-color:red;
+
+}
+
+.recherche-input{
+    position:relative;
+    padding:10px;
+    border:none;
+    width:300px;
+}
+
+.recherche-button {
+
+    border:none;
+    background-color:Yellow;
+    color:black;
+    cursor:pointer;
+
+}
+.navmap-container  {
+    justify-content:center;
+}
+.map-container{
+    width:100%;
+    margin-top:20px;
+    justify-content:center;
+    text-align:center;
+    background-color:blue;
+}
+
+.nav-list {
+    width:100%;
+    margin-top:20px;
+    justify-content:right;
+    text-align:right;
+    background-color:blue;
+}
+.default-villes{
+  display: bloc;
+}
+.villePrinc {
+    border:1px;
+    display: inline-bloc;
+}
