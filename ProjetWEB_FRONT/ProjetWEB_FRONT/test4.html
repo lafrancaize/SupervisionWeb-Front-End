@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="test4.css">
+
+    <title>Télécométéo</title>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <a class="logo"> Télécométéo </a>
+        <a href="admin">se connecter</a>
+    </div>
+    <!--champ de recherche de ville -->
+    <div class="recherche-container">
+        <label for="searchInput"></label>
+        <input type="text" class="recherche-input" id="searchInput" name="searchInput" placeholder="Rechercher une Ville...">
+        <button class="recherche-button" type="button" onclick="envoyerDonnees()">
+            <img src="recherche.png"/>
+        </button>
+    </div>
+
+</header>
+<div class="generic-container">
+    <div class="time-selector">
+        <button type="button" class="time-set">Aujourd'hui</button>
+        <button type="button" class="time-set">Demain</button>
+        <button type="button" class="time-set">7 Jours</button>
+        <button type="button" class="time-set">15 Jours</button>
+    </div>
+</div>
+<div class="<weatherContainer">
+
+    <div class="map-container">
+        <iframe width=100%" height="600" src="https://www.openstreetmap.org/export/embed.html?bbox=-5.3174%2C41.303%2C9.561%2C51.124&layer=mapnik" style="border: 1px solid black"></iframe>
+    </div>
+
+    <div class="info" >
+        <div class="selected-city" id="city">
+
+        </div>
+        <div class="temperature" id="temperature">
+
+        </div>
+        <div class="weather-icon" id="weather">
+
+        </div>
+        <div class="windspeed" id="windspeed">
+
+        </div>
+        <div class ="humidity" id="humidity">
+
+        </div>
+    </div>
+
+</div>
+
+   <!--
+<div class="generic-container">
+<div class="showWeather-container">
+    <div class="showWeather-element">nom</div>
+    <div class="showWeather-element">temp</div>
+    <div class="showWeather-element">vitesse du vent</div>
+    <div class="showWeather-element">météo</div>
+</div>
+--->
+<div class="generic-container">
+    <div class="default-villes">
+        test
+    </div>
+</div>
+<script src="test4.js"></script>
+</body>
+</html>
