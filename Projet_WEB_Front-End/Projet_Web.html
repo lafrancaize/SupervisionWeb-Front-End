@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Projet_Web.css">
+
+    <title>Télécométéo</title>
+</head>
+<body>
+<header>
+
+    <div class="navbar">
+        <a class="logo"> Télécométéo </a>
+        <a href="admin">se Connecter</a>
+    </div>
+
+    <!--champ de recherche de ville -->
+    <div class="recherche-container">
+        <label for="searchInput"></label>
+        <input type="text" class="recherche-input" id="searchInput" name="searchInput" placeholder="Rechercher une Ville...">
+        <button class="recherche-button" type="button" id="updateButton" >
+            <img src="recherche.png"/>
+        </button>
+    </div>
+
+</header>
+<!--sélection de la plage temporelle d'affichage du temps-->
+<div class="generic-container">
+    <div class="time-selector">
+        <button type="button" class="time-set" id="boutonAujourdHui">Aujourd'hui</button>
+        <button type="button" class="time-set" id="boutonDemain">Demain</button>
+        <button type="button" class="time-set" id="bouton7Jours">7 Jours</button>
+        <button type="button" class="time-set" id="bouton15Jours">15 Jours</button>
+    </div>
+</div>
+
+<!-- Affichage du temps actuel --->
+<div class="generic-container" >
+   <div class=" main-display">
+        <div class="map-container">
+        <iframe width="100%" height="600" src="https://www.openstreetmap.org/export/embed.html?bbox=-5.3174%2C41.303%2C9.561%2C51.124&layer=mapnik" style="border: 1px solid black"></iframe>
+         </div>
+        <div class="info" id="info">
+
+        </div>
+   </div>
+</div>
+
+<!-- Affichage du temps par heure  --->
+<div class="generic-container">
+    <div class="scrollable-container" id="WeatherHour">
+    </div>
+</div>
+
+   <!-- Affichage du temps sur 7/15 jours --->
+<div class="generic-container">
+
+    <div class="scrollable-container" id="weatherDay">
+
+    </div>
+</div>
+
+
+    <!-- Affichage des villes par défaut -->
+<div class="generic-container">
+    <div class="default-villes" id="defaultVilles">
+    </div>
+</div>
+
+<script src="Projet_Web.js"></script>>
+</body>
+</html>

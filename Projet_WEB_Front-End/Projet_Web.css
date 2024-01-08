@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+* {box-sizing: border-box;}
+
+/*classes génériques*/
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-image: url("ciel.webp");
+    background-size:cover;
+}
+
+.generic-container{
+    display:flex;
+    width:100%;
+    text-align:center;
+    justify-content:center;
+}
+
+header {
+    width:100%;
+}
+
+/* barre en haut du site */
+.navbar {
+       overflow: hidden;
+       height: 80px;
+       background-color: #333;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* logo (titre du site) */
+.logo {
+    position:absolute;
+    font-size:50px;
+}
+
+/*Barre de recherche */
+.recherche-container{
+    width:100%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+
+}
+
+.recherche-input{
+    position:relative;
+    padding:10px;
+    border:none;
+    width:40%;
+}
+
+.recherche-button {
+    border:none;
+    color:black;
+    cursor:pointer;
+}
+.recherche-button img{
+    height:50px;
+    width:50px;
+}
+/*sélection de la plage de temps d'affichage */
+
+.time-selector{
+
+    display: flex;
+    /*    justify-content: space-around; */
+    width: 90%;
+    background-color: #333;
+    height:40px;
+    margin-bottom:5px;
+    border-radius: 0px;
+    font-size:50i px;
+}
+
+.time-set{
+    background-color:#333;
+    height:100%;
+    color:white;
+    width: 200px;
+    cursor:pointer;
+    border:transparent;
+    font-size:50 px;
+}
+
+/*conteneur Principal pour l'affichage du temps actuel selon la ville sélectionnée */
+
+.weatherContainer{
+    width:100%;
+    display: inline;
+}
+
+.map-container {
+    margin-left:0%;
+    width:50%;
+    float:left;
+    flex-shrink:0;
+}
+
+.info {
+    width:100%;
+    background-color:red;
+    height:600px;
+    display:block;
+}
+
+.selected-city {
+    width:100%;
+    height:150px;
+    background-color:#cad4da;
+    font-size:50px;
+}
+
+.temperature {
+    width:50%;
+    height:325px;
+    background-color:#cad4da;
+    float:left;
+    font-size:60px;
+}
+
+.weather-icon {
+    width:50%;
+    height:325px;
+    background-color:#cad4da;
+    float:right;
+}
+
+.windspeed{
+    width:50%;
+    height:125px;
+    background-color:#cad4da;
+    float:left;
+    font-size:50px;
+}
+
+.humidity {
+    width:50%;
+    height:125px;
+    background-color:#cad4da;
+    float:right;
+    font-size:50px;
+}
+
+.default-villes {
+    display:flex;
+    width:90%;
+    background-color:red;
+    height: 100px;
+}
+
+
+/* conteneur d'affichage selon l'heure */
+.scrollable-container {
+    width:90%;
+    overflow-x:auto;
+    white-space:nowrap;
+    min-width:0;
+    display: flex;
+}
+
+.weather-hour {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.hour-element {
+    background-color:#cad4da;
+    width:200px;
+    height:200px;
+    font-size:20px;
+    flex-shrink:0;
+    border-radius:5px;
+    padding:10px;
+    margin:5px;
+    margin-top:15px;
+    margin-bottom:20px;
+    height:150 px;
+    text-align:center;
+}
+/*Affichage des villes par défaut*/
+.generic-ville {
+    display:block;
+    width:30%;
+}
+
+.generic-div {
+    display:flex;
+    width:100%;
+    justify-content:center;
+    text-align:center;
+    margin:2px;
+}
+
+.generic-main {
+    width:50%;
+}
+
+.generic-info {
+    width: 33%;
+}
+
+/*afichage des données journalières de la ville sélectionnée*/
+
+.generic-day{
+    flex-grow: 1;
+    display:block;
+    width:300px;
+    justify-content:center;
+    min-width:0;
+    flex-shrink:0;
+    background-color:#cad4da;
+    border-radius:5px;
+    padding:10px;
+    margin:5px;
+    margin-top:15px;
+    margin-bottom:20px;
+    height:150 px;
+    text-align:center;
+}
+.half-container{
+    width:50%
+}
+
+.hidden{
+    display: none !important;
+
+}
+.main-display {
+    display:flex;
+    width:90%;
+    background-color:red;
+    height: 600px;
+}
+.defaultDisplay {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:left;
+    width:50%;
+}
+.default-display-ville{
+    width:50%;
+    height:200px;
+
+}
